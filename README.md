@@ -44,7 +44,6 @@
 	  
 	  pip3 install --upgrade setuptools pip
 	  
-	  pip install --upgrade setuptools pip
 
 ### Библиотеки.
 Данный набор библиотек тестировался на Python 3.9-3.10
