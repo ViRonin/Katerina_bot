@@ -34,6 +34,8 @@
 [Telegram API's definition of the types](https://core.telegram.org/bots/api#available-types)
 
 [API methods](https://core.telegram.org/bots/api#available-methods)
+	
+## Функции.
 
 ### Профилактика. 
 Библиотеки могут конфликтовать между собой поетому я рекомендую на новосозданую виртуальную среду накатить следующие :	  
@@ -50,13 +52,7 @@
 Важно устанавливать на Python 3 через pip3
 	 
 	  pip3 install selenium
-	 
-	  pip3 install wikipedia
-	
-	  pip3 install pyowm
-	 
-	  pip3 install googletrans==3.1.0a0
-	 
+	 	  	 
 	  pip3 install PyTelegramBotApi
 	  
 
@@ -71,8 +67,7 @@
 
 2. Правильность расположения путей файлов.
 	
-3. Наличие a)Telegram token b)API ключа pyowm  
-   ![pyowm](https://github.com/ViRonin/Alisa_bot/blob/main/pyowm%20api.PNG) 
+3. Наличие a)Telegram token  
 	
 4. Соотвествия версий браузера Хром и Хром драйвера.
   ![Хром версии](https://github.com/ViRonin/Alisa_bot/blob/main/chrome%20seting%202.PNG)
@@ -80,7 +75,10 @@
 5. Указать Admin = Ваш телеграм ID
   ![ID](https://github.com/ViRonin/Alisa_bot/blob/main/telegram%20id.PNG)
 
-6. Установить версию библиотеки `pip3 install googletrans==3.1.0a0` на других у меня была ошибка с автопереводом названия населенного пункта 
+
+	
+
+	
 	
 	
 ## Пост скриптум.
@@ -88,4 +86,4 @@
 *Можно использовать и другие драйверы и методы вызова функций а так же переделать на переспективу на асинхронный тип взаимодействия бота но как для примера в принципе сойдет*
 
 	
-*Если код пригодился тебе или был полезен то поставь звездочку и напиши приятный коментарий, очень рад поделиться!*
+*Если код пригодился тебе или был полезен то поставь звездочку и напиши приятный коментарий, очень рад поделиться!* V(=^･ω･^=)v
