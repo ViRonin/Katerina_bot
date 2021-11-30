@@ -37,7 +37,7 @@
 	
 ## Функции.
 
-* 1. = Security =
+*  1 = Security =
 	
 Он же Security блок дает возможность только авторизированому пользователю использовать бот для ЗБТ или как пример Katerina_bot - менеджер файлов который имеет доступ к файлам ПК для передачи или просмотра то я полагаю єта опция необходима для конфиденциальности. Создается файл `...\Security_Katerina.db` 
 
@@ -60,13 +60,24 @@
 
 
 	
-* 2.команда `/urlpng` 
+*  2 `/urlpng` 
 
 Делает скриншот как внутри директорий ПК так и внешней URL (но необходимо указывать либо `C:\...` `D:\...` `E:\...` либо `http...` `https...`  на котором запущен код при помощи `Silenium` *в частности веб драйвера Хром* поскольку бот просто падет.)
 
 ![5](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a5.PNG)
 
 ![6](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a6.PNG)
+	
+![7](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a7.PNG)
+	
+*  3 `/get_doc` & `/get_photo` 	
+
+Команды которые отправляют соответсвено любой документ `PDF` `PNG` `MP3` и т.д. или как фото,  передаеться без проблем до 50-100 (мб)!
+
+![8](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a8.PNG)
+	
+![9](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a9.PNG)
+
 	
 
 ### Профилактика. 
