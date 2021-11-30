@@ -37,6 +37,37 @@
 	
 ## Функции.
 
+#1. = Security =
+Он же Security блок дает возможность только авторизированому пользователю использовать бот для ЗБТ или как пример Katerina_bot - менеджер файлов который имеет доступ к файлам ПК для передачи или просмотра то я полагаю єта опция необходима для конфиденциальности. Создается файл `...\Security_Katerina.db` 
+
+После входа Вас будет приветствовать бот с требованием ввести пароль
+	
+![1](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a1.PNG)
+	
+![2](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a2.PNG)
+
+![3](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a3.PNG)
+
+
+	
+<p align="center">ВАЖНО!
+	
+Не добавлйте через BOT FATHER команды `/setcommands` иначе сам откроешь уязвимость где можно пользоваться командами в обход базы данных регестрированых пользователей.
+Сама по себе команда `/help` присутствует к коде и уже внутри кода добавлять и изменять можно.
+
+![4](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a4.PNG)
+
+
+	
+#2.команда `/urlpng` 
+
+Делает скриншот как внутри директорий ПК так и внешней URL (но необходимо указывать либо `C:\...` `D:\...` `E:\...` либо `http...` `https...`  на котором запущен код при помощи `Silenium` [ *в частности веб драйвера Хром * ] поскольку бот просто падет.)
+
+![5](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a5.PNG)
+
+![6](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/a6.PNG)
+	
+
 ### Профилактика. 
 Библиотеки могут конфликтовать между собой поетому я рекомендую на новосозданую виртуальную среду накатить следующие :	  
 
