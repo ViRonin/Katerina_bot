@@ -42,7 +42,7 @@
 [Клавиатура](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/InlineKeyboardButton%20%20.png)
 ## Функции.
 
-*  1 = Security =
+*  1 Security 
 	
 Он же Security блок дает возможность только авторизированому пользователю использовать бот для ЗБТ или как пример Katerina_bot - менеджер файлов который имеет доступ к файлам ПК для передачи или просмотра то я полагаю єта опция необходима для конфиденциальности. Создается файл `...\Security_Katerina.db` 
 
