@@ -22,7 +22,7 @@
 
 import sqlite3
 from time                     import sleep
-from telebot                  import TeleBot
+from telebot                  import TeleBot, types
 from telebot.apihelper        import ApiException                            
 from selenium                 import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -98,37 +98,82 @@ bot.send_message(Admin, 'Привет Одмен! Менеджер файлов 
 bot.send_sticker(Admin, 'CAACAgIAAxkBAAEDFoRhaafZPLXz9SVzm7Izxcl7OCLuvAAC0w8AAqZA4UmKfslF6SOnrCEE')
 
 
+# ======================== Help =======================================
 @bot.message_handler(commands=['help'])
-def help(message):
-    text_help = "help - Помощь\n\
-                \n /start - перезапуск/rebut \n\
-                \n /get_photo - Фото\n\
-                \n /get_doc - Документ \n\
-                \n /parshttp - сохранить сайт \n\
-                \n /urlpng - URL скриншот в PNG [PC \ URL] \n\
-                \n /pc - PC helper"
-                   
-    bot.send_message(message.chat.id, text_help)
+def get_help_messages(message):
+    # bot.send_message(message.from_user.id, "Выбери команду.")
+    keyboard = types.InlineKeyboardMarkup(row_width=3)
+    btn1 = types.InlineKeyboardButton(text='URL 📸 в PNG', callback_data='urlpng_')
+    btn2 = types.InlineKeyboardButton(text='Отправить 📂', callback_data='get_doc_')
+    btn3 = types.InlineKeyboardButton(text='Отправить 🖼', callback_data='get_photo_')
+    btn4 = types.InlineKeyboardButton(text='💾 сайт в чат', callback_data='parshttp_')
+    btn5 = types.InlineKeyboardButton(text='PC helper 🔐', callback_data='pc_')
+    keyboard.add(btn1, btn2, btn3, btn4, btn5)
+        
+    bot.send_message(message.from_user.id, text='Выбири команду', reply_markup=keyboard)
+
+# Обработчик нажатий на кнопки
+@bot.callback_query_handler(func=lambda call: True)
+def callback_worker(call):
+    # Если нажали на одну из 5 кнопок — выводим инфу по ней
+    if call.data == "urlpng_": 
+        # Формируем текст после кнопки
+        msg = ('➡️ /urlpng ')
+        text_pchelp =r"---------- PC helper ---------- \
+------------ РАСПОЛОЖЕНИЕ ПАПКИ --------------- \
+🖤  D:\DATA Osa  - Data\
+🖤  D:\  - Проекты\
+🖤  E:\  - Игры пиратство\
+🖤  C:\Users\[USER_NAME_YOU_PC]\Desktop\  - Рабочий стол\
+🖤  C:\Users\[USER_NAME_YOU_PC]\Downloads\  - Загрузки\
+🖤  C:\Users\[USER_NAME_YOU_PC]\Desktop\Projekt\Pythone\  - Доки Py"                   
+        #Необходимо для удобства прописать папки на ПК для дальнейшего копирования
+        bot.send_message(call.from_user.id, text_pchelp)
+        # Отправляем текст в Телеграм
+        bot.send_message(call.from_user.id, msg)
+    
+    if call.data == "get_doc_":
+        msg1 = ('➡️ /get_doc ')       
+        text_pchelp1 =r"Пример: C:\Users\[USER_NAME_YOU_PC]\Downloads\Photo.png"
+        bot.send_message(call.from_user.id, text_pchelp1) 
+        bot.send_message(call.from_user.id, msg1)
+    
+    if call.data == "get_photo_":
+        msg2 = ('➡️ /get_photo ')
+        text_pchelp2 =r"Пример: C:\Users\[USER_NAME_YOU_PC]\Downloads\Photo.png"
+        bot.send_message(call.from_user.id, text_pchelp2)        
+        bot.send_message(call.from_user.id, msg2)
+    
+    if call.data == "parshttp_":
+        msg3 = ('➡️ /parshttp ')
+        text_pchelp3 =r"Важно: должно присутствовать http: или https: !!!"
+        bot.send_message(call.from_user.id, text_pchelp3)        
+        bot.send_message(call.from_user.id, msg3)
+    
+    if call.data == "pс_":
+        msg4 = ('➡️ /pс ')
+        text_pchelp4 =r"Папки на твоем ПК"
+        bot.send_message(call.from_user.id, text_pchelp4)         
+        bot.send_message(call.from_user.id, msg4)
 
 
 # ===================== COMANDS PC ==================================
-# Команды для удобного cntrl+C & cntrl+V с телефона 
+
 
 @bot.message_handler(commands=['pc']) 
 def help(message):
     text_pchelp =r"----- PC helper -----\n\
-            /urlpng - cкрин файлов \
-                    ---- ПАПКИ ---- \
-                🖤  D:\DATA Osa  - Data\
-                🖤  D:\  - Диск D\
-                🖤  E:\  - Диск E\
-                🖤  C:\Users\[USER_NAME_YOU_PC]\Desktop\  - Рабочий стол\
-                🖤  C:\Users\[USER_NAME_YOU_PC]\Downloads\  - Загрузки\
-            🖤 C:\Users\[USER_NAME_YOU_PC]\Projekt\Pythone\   - Документы Py"
+        /urlpng - cкрин файлов \
+------------ РАСПОЛОЖЕНИЕ ПАПКИ --------------- \
+🖤  D:\DATA Osa  - Data\
+🖤  D:\  - Проекты\
+🖤  E:\  - Игры пиратство\
+🖤  C:\Users\[USER_NAME_YOU_PC]\Desktop\  - Рабочий стол\
+🖤  C:\Users\[USER_NAME_YOU_PC]\Downloads\  - Загрузки\
+🖤  C:\Users\[USER_NAME_YOU_PC]\Desktop\Projekt\Pythone\  - Доки Py"
                    
     
     bot.send_message(message.chat.id, text_pchelp,)    
-
 
 # ===================     SCREENSHOTER     ===================
 # Скачай хром потом хром драйвер https://chromedriver.chromium.org
