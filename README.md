@@ -33,8 +33,13 @@
 	  
 [Telegram API's definition of the types](https://core.telegram.org/bots/api#available-types)
 
-[API methods](https://core.telegram.org/bots/api#available-methods)
+![API methods](https://core.telegram.org/bots/api#available-methods)
 	
+## Обновление 
+	
+Добавленна `InlineKeyboardButton.`
+
+[Клавиатура](https://github.com/ViRonin/Katerina_bot/blob/main/file%20for%20Katerina/InlineKeyboardButton%20%20.png)
 ## Функции.
 
 *  1 = Security =
