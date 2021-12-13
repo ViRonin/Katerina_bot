@@ -33,7 +33,7 @@
 	  
 [Telegram API's definition of the types](https://core.telegram.org/bots/api#available-types)
 
-![API methods](https://core.telegram.org/bots/api#available-methods)
+[API methods](https://core.telegram.org/bots/api#available-methods)
 	
 ## Обновление 
 	
